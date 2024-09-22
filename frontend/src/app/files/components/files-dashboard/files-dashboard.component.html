@@ -1,0 +1,31 @@
+<div class="upload-section">
+  <div class="file-drop-area">
+    <ngx-file-drop (onFileDrop)="dropped($event)" class="drop-zone"></ngx-file-drop>
+
+    <div class="browse-trigger" (click)="openFileBrowser($event)">
+      <i-feather name="share" class="icon-browse"></i-feather>
+      <button class="btn-browse" type="button" id="btn-browse" (click)="openFileBrowser($event)">
+        <p class="btn-text">Browse file</p>
+      </button>
+      <input type="file" #fileInput (change)="onFileSelected($event)" style="display: none;" />
+    </div>
+  </div>
+
+  <div class="file-list" *ngIf="uploadedFiles.length > 0; else noFiles">
+    <h2>Uploaded Files</h2>
+    <ul class="file-list-items">
+      <app-file-item
+        *ngFor="let file of uploadedFiles"
+        [file]="file"
+        (download)="downloadFile($event)"
+        (delete)="deleteFile($event)">
+      </app-file-item>
+    </ul>
+  </div>
+
+  <ng-template #noFiles>
+    <div class="no-files-message">
+      <p>No files uploaded</p>
+    </div>
+  </ng-template>
+</div>

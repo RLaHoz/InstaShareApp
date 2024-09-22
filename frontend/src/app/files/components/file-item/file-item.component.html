@@ -1,0 +1,21 @@
+<li [attr.data-file-id]="file.id" class="file-item">
+  <div class="file-details">
+    <div class="file-type">
+      <label>zip</label>
+    </div>
+    <div class="file-info">
+      <label class="file-name">{{ file.name }}</label>
+      <span class="file-size">{{ file.size / 1024 | number:'1.0-2' }} KB</span>
+      <label class="file-status">{{ file.status | uppercase }}</label>
+    </div>
+  </div>
+
+  <div class="file-actions">
+    <button aria-label="Download" class="btn-download" *ngIf="file.allowDownloads" (click)="onDownload()">
+      <i-feather name="arrow-down-circle"></i-feather>
+    </button>
+    <button class="btn-delete" (click)="onDelete()">
+      <i-feather name="trash-2"></i-feather>
+    </button>
+  </div>
+</li>

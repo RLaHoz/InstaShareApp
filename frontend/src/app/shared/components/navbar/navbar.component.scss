@@ -1,0 +1,41 @@
+.custom-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+
+  .logo h1 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+
+    li {
+      display: inline-block;
+      cursor: pointer;
+
+      a {
+        text-decoration: none;
+        font-size: 1rem;
+        color: #333;
+        padding: 10px 15px;
+        border-radius: 20px;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #f0c283;
+          color: white;
+        }
+      }
+    }
+  }
+}

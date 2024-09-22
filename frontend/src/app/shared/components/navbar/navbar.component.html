@@ -1,0 +1,8 @@
+<nav class="custom-navbar" *ngIf="isLoggedIn$ | async">
+  <div class="logo">
+    <h1>InstaShareApp</h1>
+  </div>
+  <ul class="navbar-links">
+    <li (click)="logout()"><a>Logout</a></li>
+  </ul>
+</nav>

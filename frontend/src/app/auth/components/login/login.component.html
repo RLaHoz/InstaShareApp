@@ -1,0 +1,31 @@
+<div class="login-container">
+  <div class="login-box">
+    <div class="login-header">
+      <h1>Login</h1>
+      <p>Please sign in to continue.</p>
+    </div>
+    <form [formGroup]="loginForm">
+      <div class="input-container">
+        <label for="email">EMAIL</label>
+        <div class="input-box">
+          <i class="icon-email"></i>
+          <input type="email" id="email" placeholder="user123@email.com" formControlName="email"/>
+        </div>
+      </div>
+
+      <div class="input-container">
+        <label for="password">PASSWORD</label>
+        <div class="input-box">
+          <i class="icon-password"></i>
+          <input type="password" id="password" placeholder="Password" formControlName="password"/>
+        </div>
+      </div>
+
+      <button type="submit" class="login-btn" (click)="login()">LOGIN</button>
+
+      <div class="signup">
+        <p>Don't have an account? <a class="register-btn"  (click)="register()">Sign up</a></p>
+      </div>
+    </form>
+  </div>
+</div>
