@@ -15,8 +15,11 @@
     position: relative;
 
     .icon-browse {
-      font-size: 1.5rem;
-      color: #ffbb33;
+
+      font-size: 1rem;
+      position: relative;
+      left: 4.8rem;
+      color: white;
     }
 
     .btn-browse {
@@ -43,6 +46,8 @@
   }
 
   .browse-trigger {
+    display: flex;
+    align-items: center;
     position: relative;
     bottom: 5rem;
   }
@@ -79,4 +84,28 @@
   .btn-browse {
     width: 100%;
   }
+}
+
+
+@media (min-width: 770px) {
+
+  .upload-section {
+    .browse-trigger {
+      display: block;
+    }
+
+    .btn-browse {
+      width: 80%;
+    }
+
+    .file-drop-area {
+
+      .icon-browse {
+        font-size: 1.5rem;
+
+      }
+    }
+  }
+
+
 }
